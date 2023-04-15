@@ -23,9 +23,6 @@ services:
         build:
             context: ./images/php
         # этот образ будет общаться с mysql
-            args: 
-                - PHP_USER=${PHP_USER}
-                - PHP_USER_PASSWORD=${PHP_USER_PASSWORD}
         links:
             - mysql
         # монтируем директорию с проектами
