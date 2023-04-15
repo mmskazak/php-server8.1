@@ -5,10 +5,6 @@
 # На каждый RUN создается новый слой в образе, поэтому рекомендуется объединять команды.
 FROM php:8.1-fpm
 
-RUN useradd -G root  -p $PHP_USER_PASSWORD -s /bin/bash $PHP_USER
-RUN install -d -m 755 -o $PHP_USER -g $PHP_USER /home/$PHP_USER
-
-
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
